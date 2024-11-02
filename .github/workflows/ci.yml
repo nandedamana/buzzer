@@ -18,3 +18,10 @@ jobs:
       env:
        CC:   clang
        CXX:  clang++
+    - name: Package
+      run: tar cvzf bazel-bin.tgz bazel-bin
+    - name: Upload the package
+      uses: actions/upload-artifact@v4
+      with:
+        name: bazel-bin
+        path: bazel-bin.tgz
