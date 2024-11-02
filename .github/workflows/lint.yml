@@ -1,6 +1,6 @@
 name: Buzzer Linter
 run-name: Checking code format.
-on: [pull_request, push]
+on: [pull_request, push, workflow_dispatch]
 jobs:
   clang-linter:
     runs-on: ubuntu-latest
